@@ -15,7 +15,7 @@ get_header(); ?>
 			<!-- Subpage title start -->
 			<div class="page-banner-title">
 				<div class="text-center">
-					<h2>About Event</h2>
+					<h2>About Events</h2>
 					<ol class="breadcrumb">
 						<li>
 							<a href="#">Exibit /</a>
