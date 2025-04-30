@@ -21,7 +21,7 @@ get_header(); ?>
 							<a href="#">Exibit /</a>
 						</li>
 						<li>
-							About
+							About Us Page
 						</li>
 					</ol>
 				</div>
