@@ -52,9 +52,13 @@ if (!getenv('JAWSDB_URL')) {
     define( 'DISALLOW_FILE_MODS', true );
 }
 
-// ** Site URLs - Optional but useful for environments **
-define( 'WP_HOME', getenv('WP_HOME') ?: 'http://localhost' );
-define( 'WP_SITEURL', getenv('WP_SITEURL') ?: 'http://localhost' );
+// ** Site URLs - Automatically detect host and protocol **
+if ( isset($_SERVER['HTTP_HOST']) ) {
+    $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https://' : 'http://';
+    $host = $_SERVER['HTTP_HOST'];
+    define( 'WP_HOME', $protocol . $host );
+    define( 'WP_SITEURL', $protocol . $host );
+}
 
 /** Absolute path to the WordPress directory. */
 if ( ! defined( 'ABSPATH' ) ) {
